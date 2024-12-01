@@ -13,7 +13,6 @@ namespace EvilLimiter.Windows.Forms
             => ColorStyleChanged?.Invoke(null, e);
 
 
-
         public FrmBase()
         {
             InitializeComponent();
@@ -21,8 +20,6 @@ namespace EvilLimiter.Windows.Forms
 
             ColorStyleChanged += FrmBase_ColorStyleChanged;
         }
-
-
 
         public void ChangeColorStyle(MetroColorStyle style)
         {

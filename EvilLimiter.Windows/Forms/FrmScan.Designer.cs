@@ -45,7 +45,7 @@
             // 
             this.rbtnEntireRange.AutoSize = true;
             this.rbtnEntireRange.Checked = true;
-            this.rbtnEntireRange.Location = new System.Drawing.Point(23, 72);
+            this.rbtnEntireRange.Location = new System.Drawing.Point(23, 66);
             this.rbtnEntireRange.Name = "rbtnEntireRange";
             this.rbtnEntireRange.Size = new System.Drawing.Size(120, 15);
             this.rbtnEntireRange.TabIndex = 0;
@@ -56,7 +56,7 @@
             // rbtnCustomRange
             // 
             this.rbtnCustomRange.AutoSize = true;
-            this.rbtnCustomRange.Location = new System.Drawing.Point(23, 127);
+            this.rbtnCustomRange.Location = new System.Drawing.Point(23, 117);
             this.rbtnCustomRange.Name = "rbtnCustomRange";
             this.rbtnCustomRange.Size = new System.Drawing.Size(137, 15);
             this.rbtnCustomRange.TabIndex = 1;
@@ -67,7 +67,7 @@
             // 
             this.lblSubnetRange.AutoSize = true;
             this.lblSubnetRange.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.lblSubnetRange.Location = new System.Drawing.Point(98, 90);
+            this.lblSubnetRange.Location = new System.Drawing.Point(98, 83);
             this.lblSubnetRange.Name = "lblSubnetRange";
             this.lblSubnetRange.Size = new System.Drawing.Size(143, 15);
             this.lblSubnetRange.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel2.Location = new System.Drawing.Point(40, 90);
+            this.metroLabel2.Location = new System.Drawing.Point(40, 83);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(52, 15);
             this.metroLabel2.TabIndex = 2;
@@ -89,16 +89,16 @@
             // 
             // 
             this.tbIpRange.CustomButton.Image = null;
-            this.tbIpRange.CustomButton.Location = new System.Drawing.Point(149, 1);
+            this.tbIpRange.CustomButton.Location = new System.Drawing.Point(151, 1);
             this.tbIpRange.CustomButton.Name = "";
-            this.tbIpRange.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tbIpRange.CustomButton.Size = new System.Drawing.Size(19, 18);
             this.tbIpRange.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbIpRange.CustomButton.TabIndex = 1;
             this.tbIpRange.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbIpRange.CustomButton.UseSelectable = true;
             this.tbIpRange.CustomButton.Visible = false;
             this.tbIpRange.Lines = new string[0];
-            this.tbIpRange.Location = new System.Drawing.Point(98, 148);
+            this.tbIpRange.Location = new System.Drawing.Point(98, 137);
             this.tbIpRange.MaxLength = 32767;
             this.tbIpRange.Name = "tbIpRange";
             this.tbIpRange.PasswordChar = '\0';
@@ -107,7 +107,7 @@
             this.tbIpRange.SelectionLength = 0;
             this.tbIpRange.SelectionStart = 0;
             this.tbIpRange.ShortcutsEnabled = true;
-            this.tbIpRange.Size = new System.Drawing.Size(171, 23);
+            this.tbIpRange.Size = new System.Drawing.Size(171, 21);
             this.tbIpRange.TabIndex = 3;
             this.tbIpRange.UseSelectable = true;
             this.tbIpRange.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -117,7 +117,7 @@
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel3.Location = new System.Drawing.Point(40, 153);
+            this.metroLabel3.Location = new System.Drawing.Point(40, 141);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(52, 15);
             this.metroLabel3.TabIndex = 2;
@@ -127,7 +127,7 @@
             // 
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel4.Location = new System.Drawing.Point(98, 174);
+            this.metroLabel4.Location = new System.Drawing.Point(98, 161);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(171, 45);
             this.metroLabel4.TabIndex = 2;
@@ -138,9 +138,9 @@
             // 
             this.btnScan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnScan.Highlight = true;
-            this.btnScan.Location = new System.Drawing.Point(196, 262);
+            this.btnScan.Location = new System.Drawing.Point(196, 242);
             this.btnScan.Name = "btnScan";
-            this.btnScan.Size = new System.Drawing.Size(75, 23);
+            this.btnScan.Size = new System.Drawing.Size(75, 21);
             this.btnScan.TabIndex = 4;
             this.btnScan.Text = "Scan";
             this.btnScan.UseSelectable = true;
@@ -150,9 +150,9 @@
             // 
             this.pbScan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbScan.Location = new System.Drawing.Point(23, 262);
+            this.pbScan.Location = new System.Drawing.Point(23, 242);
             this.pbScan.Name = "pbScan";
-            this.pbScan.Size = new System.Drawing.Size(165, 23);
+            this.pbScan.Size = new System.Drawing.Size(165, 21);
             this.pbScan.TabIndex = 5;
             // 
             // metroLabel1
@@ -160,7 +160,7 @@
             this.metroLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel1.Location = new System.Drawing.Point(23, 244);
+            this.metroLabel1.Location = new System.Drawing.Point(23, 225);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(41, 15);
             this.metroLabel1.TabIndex = 6;
@@ -171,7 +171,7 @@
             this.lblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblStatus.AutoSize = true;
             this.lblStatus.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.lblStatus.Location = new System.Drawing.Point(70, 244);
+            this.lblStatus.Location = new System.Drawing.Point(70, 225);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(0, 0);
             this.lblStatus.TabIndex = 6;
@@ -179,9 +179,9 @@
             // FrmScan
             // 
             this.AcceptButton = this.btnScan;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(294, 308);
+            this.ClientSize = new System.Drawing.Size(294, 284);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.pbScan);
@@ -196,6 +196,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmScan";
+            this.Padding = new System.Windows.Forms.Padding(20, 51, 20, 17);
             this.Resizable = false;
             this.ShowInTaskbar = false;
             this.Text = "Host Scan";

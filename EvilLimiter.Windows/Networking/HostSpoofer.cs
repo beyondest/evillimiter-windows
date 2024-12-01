@@ -28,8 +28,6 @@ namespace EvilLimiter.Windows.Networking
 
         private CancellationTokenSource _tokenSource;
 
-
-
         public HostSpoofer(NetworkInformation netInfo)
         {
             this._networkInfo = netInfo;
@@ -152,7 +150,6 @@ namespace EvilLimiter.Windows.Networking
                 Thread.Sleep(Config.SpoofSendInterval);
             }
         }
-
 
         private void Restore(Host host)
         {

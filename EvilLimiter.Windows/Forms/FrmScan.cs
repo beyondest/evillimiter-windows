@@ -18,11 +18,8 @@ namespace EvilLimiter.Windows.Forms
             Finish
         }
 
-
-
         private readonly NetworkInformation _networkInfo;
         private readonly HostScanner _hostScanner;
-
 
         #region Events
 
@@ -31,7 +28,6 @@ namespace EvilLimiter.Windows.Forms
             => ScanFinished?.Invoke(this, e);
 
         #endregion
-
 
 
         public FrmScan(NetworkInformation netInfo)
@@ -162,5 +158,7 @@ namespace EvilLimiter.Windows.Forms
         }
 
         #endregion
+
+
     }
 }

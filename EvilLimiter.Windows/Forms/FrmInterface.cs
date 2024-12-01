@@ -14,28 +14,23 @@ using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinDivertSharp;
-
 namespace EvilLimiter.Windows.Forms
 {
+    
     public partial class FrmInterface : FrmBase
     {
         private readonly Dictionary<LivePacketDevice, DeviceAddress> _interfaces;
         private LivePacketDevice _currentInterface;
         private PacketCommunicator _packetCommunicator;
 
-
-
         public FrmInterface()
         {
             InitializeComponent();
 
             this._interfaces = new Dictionary<LivePacketDevice, DeviceAddress>();
-
+            
             InitializeInterfaces();
         }
-
-
-
         private void InitializeInterfaces()
         {
             _interfaces.Clear();

@@ -38,6 +38,7 @@
             this.tsmiRemove = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiSelectAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.goToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnScan = new MetroFramework.Controls.MetroButton();
             this.lblVersion = new MetroFramework.Controls.MetroLabel();
             this.lvwHosts = new EvilLimiter.Windows.Controls.ListViewNF();
@@ -48,6 +49,8 @@
             this.chDownload = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tcHosts = new MetroFramework.Controls.MetroTabControl();
             this.tpHosts = new MetroFramework.Controls.MetroTabPage();
+            this.stop = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tpSettings = new MetroFramework.Controls.MetroTabPage();
             this.btnApplySettings = new MetroFramework.Controls.MetroButton();
             this.tcSettings = new MetroFramework.Controls.MetroTabControl();
@@ -112,70 +115,78 @@
             this.tsmiAdd,
             this.tsmiRemove,
             this.toolStripMenuItem2,
-            this.tsmiSelectAll});
+            this.tsmiSelectAll,
+            this.goToolStripMenuItem});
             this.cmsHosts.Name = "cmsHosts";
-            this.cmsHosts.Size = new System.Drawing.Size(123, 148);
+            this.cmsHosts.Size = new System.Drawing.Size(183, 268);
             this.cmsHosts.Opening += new System.ComponentModel.CancelEventHandler(this.CmsHosts_Opening);
             // 
             // tsmiLimit
             // 
             this.tsmiLimit.Name = "tsmiLimit";
-            this.tsmiLimit.Size = new System.Drawing.Size(122, 22);
+            this.tsmiLimit.Size = new System.Drawing.Size(182, 36);
             this.tsmiLimit.Text = "Limit...";
             this.tsmiLimit.Click += new System.EventHandler(this.TsmiLimit_Click);
             // 
             // tsmiBlock
             // 
             this.tsmiBlock.Name = "tsmiBlock";
-            this.tsmiBlock.Size = new System.Drawing.Size(122, 22);
+            this.tsmiBlock.Size = new System.Drawing.Size(182, 36);
             this.tsmiBlock.Text = "Block";
             this.tsmiBlock.Click += new System.EventHandler(this.TsmiBlock_Click);
             // 
             // tsmiFree
             // 
             this.tsmiFree.Name = "tsmiFree";
-            this.tsmiFree.Size = new System.Drawing.Size(122, 22);
+            this.tsmiFree.Size = new System.Drawing.Size(182, 36);
             this.tsmiFree.Text = "Free";
             this.tsmiFree.Click += new System.EventHandler(this.TsmiFree_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(119, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(179, 6);
             // 
             // tsmiAdd
             // 
             this.tsmiAdd.Name = "tsmiAdd";
-            this.tsmiAdd.Size = new System.Drawing.Size(122, 22);
+            this.tsmiAdd.Size = new System.Drawing.Size(182, 36);
             this.tsmiAdd.Text = "Add...";
             this.tsmiAdd.Click += new System.EventHandler(this.TsmiAdd_Click);
             // 
             // tsmiRemove
             // 
             this.tsmiRemove.Name = "tsmiRemove";
-            this.tsmiRemove.Size = new System.Drawing.Size(122, 22);
+            this.tsmiRemove.Size = new System.Drawing.Size(182, 36);
             this.tsmiRemove.Text = "Remove";
             this.tsmiRemove.Click += new System.EventHandler(this.TsmiRemove_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(119, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(179, 6);
             // 
             // tsmiSelectAll
             // 
             this.tsmiSelectAll.Name = "tsmiSelectAll";
-            this.tsmiSelectAll.Size = new System.Drawing.Size(122, 22);
+            this.tsmiSelectAll.Size = new System.Drawing.Size(182, 36);
             this.tsmiSelectAll.Text = "Select All";
             this.tsmiSelectAll.Click += new System.EventHandler(this.TsmiSelectAll_Click);
+            // 
+            // goToolStripMenuItem
+            // 
+            this.goToolStripMenuItem.Name = "goToolStripMenuItem";
+            this.goToolStripMenuItem.Size = new System.Drawing.Size(182, 36);
+            this.goToolStripMenuItem.Text = "Go";
+            this.goToolStripMenuItem.Click += new System.EventHandler(this.goToolStripMenuItem_Click);
             // 
             // btnScan
             // 
             this.btnScan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnScan.Highlight = true;
-            this.btnScan.Location = new System.Drawing.Point(572, 308);
+            this.btnScan.Location = new System.Drawing.Point(545, 284);
             this.btnScan.Name = "btnScan";
-            this.btnScan.Size = new System.Drawing.Size(135, 23);
+            this.btnScan.Size = new System.Drawing.Size(135, 21);
             this.btnScan.TabIndex = 1;
             this.btnScan.Text = "Scan...";
             this.btnScan.UseSelectable = true;
@@ -185,7 +196,7 @@
             // 
             this.lblVersion.AutoSize = true;
             this.lblVersion.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.lblVersion.Location = new System.Drawing.Point(272, 34);
+            this.lblVersion.Location = new System.Drawing.Point(272, 31);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(34, 15);
             this.lblVersion.TabIndex = 2;
@@ -206,11 +217,11 @@
             this.lvwHosts.ContextMenuStrip = this.cmsHosts;
             this.lvwHosts.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lvwHosts.FullRowSelect = true;
-            this.lvwHosts.Location = new System.Drawing.Point(0, 13);
+            this.lvwHosts.Location = new System.Drawing.Point(0, 12);
             this.lvwHosts.Name = "lvwHosts";
             this.lvwHosts.OwnerDraw = true;
             this.lvwHosts.Scrollable = false;
-            this.lvwHosts.Size = new System.Drawing.Size(710, 289);
+            this.lvwHosts.Size = new System.Drawing.Size(683, 267);
             this.lvwHosts.TabIndex = 3;
             this.lvwHosts.UseCompatibleStateImageBehavior = false;
             this.lvwHosts.UseSelectable = true;
@@ -249,28 +260,53 @@
             this.tcHosts.Controls.Add(this.tpHosts);
             this.tcHosts.Controls.Add(this.tpSettings);
             this.tcHosts.Controls.Add(this.tpAbout);
-            this.tcHosts.Location = new System.Drawing.Point(23, 79);
+            this.tcHosts.Location = new System.Drawing.Point(23, 73);
             this.tcHosts.Name = "tcHosts";
             this.tcHosts.SelectedIndex = 0;
-            this.tcHosts.Size = new System.Drawing.Size(718, 376);
+            this.tcHosts.Size = new System.Drawing.Size(691, 347);
             this.tcHosts.TabIndex = 4;
             this.tcHosts.UseSelectable = true;
             // 
             // tpHosts
             // 
+            this.tpHosts.Controls.Add(this.stop);
+            this.tpHosts.Controls.Add(this.button1);
             this.tpHosts.Controls.Add(this.lvwHosts);
             this.tpHosts.Controls.Add(this.btnScan);
             this.tpHosts.HorizontalScrollbarBarColor = true;
             this.tpHosts.HorizontalScrollbarHighlightOnWheel = false;
-            this.tpHosts.HorizontalScrollbarSize = 10;
+            this.tpHosts.HorizontalScrollbarSize = 9;
             this.tpHosts.Location = new System.Drawing.Point(4, 38);
             this.tpHosts.Name = "tpHosts";
-            this.tpHosts.Size = new System.Drawing.Size(710, 334);
+            this.tpHosts.Size = new System.Drawing.Size(683, 305);
             this.tpHosts.TabIndex = 0;
             this.tpHosts.Text = "Hosts";
             this.tpHosts.VerticalScrollbarBarColor = true;
             this.tpHosts.VerticalScrollbarHighlightOnWheel = false;
             this.tpHosts.VerticalScrollbarSize = 10;
+            // 
+            // stop
+            // 
+            this.stop.BackColor = System.Drawing.Color.Firebrick;
+            this.stop.Font = new System.Drawing.Font("SimSun", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.stop.Location = new System.Drawing.Point(365, 282);
+            this.stop.Name = "stop";
+            this.stop.Size = new System.Drawing.Size(75, 23);
+            this.stop.TabIndex = 5;
+            this.stop.Text = "Stop";
+            this.stop.UseVisualStyleBackColor = false;
+            this.stop.Click += new System.EventHandler(this.stop_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.Font = new System.Drawing.Font("SimSun", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Location = new System.Drawing.Point(461, 284);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Go";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // tpSettings
             // 
@@ -278,10 +314,10 @@
             this.tpSettings.Controls.Add(this.tcSettings);
             this.tpSettings.HorizontalScrollbarBarColor = true;
             this.tpSettings.HorizontalScrollbarHighlightOnWheel = false;
-            this.tpSettings.HorizontalScrollbarSize = 10;
+            this.tpSettings.HorizontalScrollbarSize = 9;
             this.tpSettings.Location = new System.Drawing.Point(4, 38);
             this.tpSettings.Name = "tpSettings";
-            this.tpSettings.Size = new System.Drawing.Size(710, 334);
+            this.tpSettings.Size = new System.Drawing.Size(710, 305);
             this.tpSettings.TabIndex = 1;
             this.tpSettings.Text = "Settings";
             this.tpSettings.VerticalScrollbarBarColor = true;
@@ -292,9 +328,9 @@
             // 
             this.btnApplySettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnApplySettings.Highlight = true;
-            this.btnApplySettings.Location = new System.Drawing.Point(572, 308);
+            this.btnApplySettings.Location = new System.Drawing.Point(572, 284);
             this.btnApplySettings.Name = "btnApplySettings";
-            this.btnApplySettings.Size = new System.Drawing.Size(135, 23);
+            this.btnApplySettings.Size = new System.Drawing.Size(135, 21);
             this.btnApplySettings.TabIndex = 13;
             this.btnApplySettings.Text = "Apply";
             this.btnApplySettings.UseSelectable = true;
@@ -311,10 +347,10 @@
             this.tcSettings.Controls.Add(this.tpAppearanceSettings);
             this.tcSettings.Controls.Add(this.tpOtherSettings);
             this.tcSettings.FontSize = MetroFramework.MetroTabControlSize.Small;
-            this.tcSettings.Location = new System.Drawing.Point(0, 13);
+            this.tcSettings.Location = new System.Drawing.Point(0, 12);
             this.tcSettings.Name = "tcSettings";
-            this.tcSettings.SelectedIndex = 4;
-            this.tcSettings.Size = new System.Drawing.Size(710, 289);
+            this.tcSettings.SelectedIndex = 0;
+            this.tcSettings.Size = new System.Drawing.Size(710, 267);
             this.tcSettings.TabIndex = 2;
             this.tcSettings.UseSelectable = true;
             // 
@@ -326,10 +362,10 @@
             this.tpRoutingSettings.Controls.Add(this.tglRouting);
             this.tpRoutingSettings.HorizontalScrollbarBarColor = true;
             this.tpRoutingSettings.HorizontalScrollbarHighlightOnWheel = false;
-            this.tpRoutingSettings.HorizontalScrollbarSize = 10;
+            this.tpRoutingSettings.HorizontalScrollbarSize = 9;
             this.tpRoutingSettings.Location = new System.Drawing.Point(4, 34);
             this.tpRoutingSettings.Name = "tpRoutingSettings";
-            this.tpRoutingSettings.Size = new System.Drawing.Size(702, 251);
+            this.tpRoutingSettings.Size = new System.Drawing.Size(702, 229);
             this.tpRoutingSettings.TabIndex = 4;
             this.tpRoutingSettings.Text = "Routing";
             this.tpRoutingSettings.VerticalScrollbarBarColor = true;
@@ -339,7 +375,7 @@
             // cbRoutingStartup
             // 
             this.cbRoutingStartup.AutoSize = true;
-            this.cbRoutingStartup.Location = new System.Drawing.Point(4, 87);
+            this.cbRoutingStartup.Location = new System.Drawing.Point(4, 80);
             this.cbRoutingStartup.Name = "cbRoutingStartup";
             this.cbRoutingStartup.Size = new System.Drawing.Size(182, 15);
             this.cbRoutingStartup.TabIndex = 5;
@@ -348,10 +384,10 @@
             // 
             // spinnerRouting
             // 
-            this.spinnerRouting.Location = new System.Drawing.Point(90, 48);
+            this.spinnerRouting.Location = new System.Drawing.Point(90, 44);
             this.spinnerRouting.Maximum = 100;
             this.spinnerRouting.Name = "spinnerRouting";
-            this.spinnerRouting.Size = new System.Drawing.Size(16, 16);
+            this.spinnerRouting.Size = new System.Drawing.Size(16, 15);
             this.spinnerRouting.Speed = 2F;
             this.spinnerRouting.TabIndex = 4;
             this.spinnerRouting.UseSelectable = true;
@@ -361,7 +397,7 @@
             // metroLabel11
             // 
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(4, 22);
+            this.metroLabel11.Location = new System.Drawing.Point(4, 20);
             this.metroLabel11.Name = "metroLabel11";
             this.metroLabel11.Size = new System.Drawing.Size(110, 19);
             this.metroLabel11.TabIndex = 3;
@@ -370,11 +406,11 @@
             // tglRouting
             // 
             this.tglRouting.AutoSize = true;
-            this.tglRouting.Location = new System.Drawing.Point(4, 48);
+            this.tglRouting.Location = new System.Drawing.Point(4, 44);
             this.tglRouting.Name = "tglRouting";
-            this.tglRouting.Size = new System.Drawing.Size(80, 17);
+            this.tglRouting.Size = new System.Drawing.Size(80, 16);
             this.tglRouting.TabIndex = 2;
-            this.tglRouting.Text = "Aus";
+            this.tglRouting.Text = "Off";
             this.tglRouting.UseSelectable = true;
             this.tglRouting.CheckedChanged += new System.EventHandler(this.TglRouting_CheckedChanged);
             // 
@@ -388,10 +424,10 @@
             this.tpScanSettings.Controls.Add(this.metroLabel3);
             this.tpScanSettings.HorizontalScrollbarBarColor = true;
             this.tpScanSettings.HorizontalScrollbarHighlightOnWheel = false;
-            this.tpScanSettings.HorizontalScrollbarSize = 10;
+            this.tpScanSettings.HorizontalScrollbarSize = 9;
             this.tpScanSettings.Location = new System.Drawing.Point(4, 34);
             this.tpScanSettings.Name = "tpScanSettings";
-            this.tpScanSettings.Size = new System.Drawing.Size(702, 251);
+            this.tpScanSettings.Size = new System.Drawing.Size(702, 229);
             this.tpScanSettings.TabIndex = 0;
             this.tpScanSettings.Text = "Scan";
             this.tpScanSettings.VerticalScrollbarBarColor = true;
@@ -401,7 +437,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(170, 105);
+            this.metroLabel6.Location = new System.Drawing.Point(170, 97);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(26, 19);
             this.metroLabel6.TabIndex = 8;
@@ -410,7 +446,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(171, 47);
+            this.metroLabel5.Location = new System.Drawing.Point(171, 43);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(26, 19);
             this.metroLabel5.TabIndex = 8;
@@ -422,16 +458,16 @@
             // 
             // 
             this.tbScanReplyTimeout.CustomButton.Image = null;
-            this.tbScanReplyTimeout.CustomButton.Location = new System.Drawing.Point(139, 1);
+            this.tbScanReplyTimeout.CustomButton.Location = new System.Drawing.Point(141, 1);
             this.tbScanReplyTimeout.CustomButton.Name = "";
-            this.tbScanReplyTimeout.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tbScanReplyTimeout.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.tbScanReplyTimeout.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbScanReplyTimeout.CustomButton.TabIndex = 1;
             this.tbScanReplyTimeout.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbScanReplyTimeout.CustomButton.UseSelectable = true;
             this.tbScanReplyTimeout.CustomButton.Visible = false;
             this.tbScanReplyTimeout.Lines = new string[0];
-            this.tbScanReplyTimeout.Location = new System.Drawing.Point(3, 101);
+            this.tbScanReplyTimeout.Location = new System.Drawing.Point(3, 93);
             this.tbScanReplyTimeout.MaxLength = 32767;
             this.tbScanReplyTimeout.Name = "tbScanReplyTimeout";
             this.tbScanReplyTimeout.PasswordChar = '\0';
@@ -440,7 +476,7 @@
             this.tbScanReplyTimeout.SelectionLength = 0;
             this.tbScanReplyTimeout.SelectionStart = 0;
             this.tbScanReplyTimeout.ShortcutsEnabled = true;
-            this.tbScanReplyTimeout.Size = new System.Drawing.Size(161, 23);
+            this.tbScanReplyTimeout.Size = new System.Drawing.Size(161, 21);
             this.tbScanReplyTimeout.TabIndex = 7;
             this.tbScanReplyTimeout.UseSelectable = true;
             this.tbScanReplyTimeout.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -452,16 +488,16 @@
             // 
             // 
             this.tbScanSendInterval.CustomButton.Image = null;
-            this.tbScanSendInterval.CustomButton.Location = new System.Drawing.Point(139, 1);
+            this.tbScanSendInterval.CustomButton.Location = new System.Drawing.Point(141, 1);
             this.tbScanSendInterval.CustomButton.Name = "";
-            this.tbScanSendInterval.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tbScanSendInterval.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.tbScanSendInterval.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbScanSendInterval.CustomButton.TabIndex = 1;
             this.tbScanSendInterval.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbScanSendInterval.CustomButton.UseSelectable = true;
             this.tbScanSendInterval.CustomButton.Visible = false;
             this.tbScanSendInterval.Lines = new string[0];
-            this.tbScanSendInterval.Location = new System.Drawing.Point(3, 44);
+            this.tbScanSendInterval.Location = new System.Drawing.Point(3, 41);
             this.tbScanSendInterval.MaxLength = 32767;
             this.tbScanSendInterval.Name = "tbScanSendInterval";
             this.tbScanSendInterval.PasswordChar = '\0';
@@ -470,7 +506,7 @@
             this.tbScanSendInterval.SelectionLength = 0;
             this.tbScanSendInterval.SelectionStart = 0;
             this.tbScanSendInterval.ShortcutsEnabled = true;
-            this.tbScanSendInterval.Size = new System.Drawing.Size(161, 23);
+            this.tbScanSendInterval.Size = new System.Drawing.Size(161, 21);
             this.tbScanSendInterval.TabIndex = 7;
             this.tbScanSendInterval.UseSelectable = true;
             this.tbScanSendInterval.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -479,7 +515,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(3, 79);
+            this.metroLabel4.Location = new System.Drawing.Point(3, 73);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(93, 19);
             this.metroLabel4.TabIndex = 6;
@@ -488,7 +524,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(3, 22);
+            this.metroLabel3.Location = new System.Drawing.Point(3, 20);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(85, 19);
             this.metroLabel3.TabIndex = 6;
@@ -506,10 +542,10 @@
             this.tpSpoofSettings.Controls.Add(this.metroLabel9);
             this.tpSpoofSettings.HorizontalScrollbarBarColor = true;
             this.tpSpoofSettings.HorizontalScrollbarHighlightOnWheel = false;
-            this.tpSpoofSettings.HorizontalScrollbarSize = 10;
+            this.tpSpoofSettings.HorizontalScrollbarSize = 9;
             this.tpSpoofSettings.Location = new System.Drawing.Point(4, 34);
             this.tpSpoofSettings.Name = "tpSpoofSettings";
-            this.tpSpoofSettings.Size = new System.Drawing.Size(702, 251);
+            this.tpSpoofSettings.Size = new System.Drawing.Size(702, 229);
             this.tpSpoofSettings.TabIndex = 1;
             this.tpSpoofSettings.Text = "Spoof";
             this.tpSpoofSettings.VerticalScrollbarBarColor = true;
@@ -519,7 +555,7 @@
             // metroLabel13
             // 
             this.metroLabel13.AutoSize = true;
-            this.metroLabel13.Location = new System.Drawing.Point(170, 162);
+            this.metroLabel13.Location = new System.Drawing.Point(170, 150);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(26, 19);
             this.metroLabel13.TabIndex = 11;
@@ -528,7 +564,7 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(170, 48);
+            this.metroLabel8.Location = new System.Drawing.Point(170, 44);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(26, 19);
             this.metroLabel8.TabIndex = 11;
@@ -540,16 +576,16 @@
             // 
             // 
             this.tbSpoofRestoreSendInterval.CustomButton.Image = null;
-            this.tbSpoofRestoreSendInterval.CustomButton.Location = new System.Drawing.Point(139, 1);
+            this.tbSpoofRestoreSendInterval.CustomButton.Location = new System.Drawing.Point(141, 1);
             this.tbSpoofRestoreSendInterval.CustomButton.Name = "";
-            this.tbSpoofRestoreSendInterval.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tbSpoofRestoreSendInterval.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.tbSpoofRestoreSendInterval.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbSpoofRestoreSendInterval.CustomButton.TabIndex = 1;
             this.tbSpoofRestoreSendInterval.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbSpoofRestoreSendInterval.CustomButton.UseSelectable = true;
             this.tbSpoofRestoreSendInterval.CustomButton.Visible = false;
             this.tbSpoofRestoreSendInterval.Lines = new string[0];
-            this.tbSpoofRestoreSendInterval.Location = new System.Drawing.Point(3, 158);
+            this.tbSpoofRestoreSendInterval.Location = new System.Drawing.Point(3, 146);
             this.tbSpoofRestoreSendInterval.MaxLength = 32767;
             this.tbSpoofRestoreSendInterval.Name = "tbSpoofRestoreSendInterval";
             this.tbSpoofRestoreSendInterval.PasswordChar = '\0';
@@ -558,7 +594,7 @@
             this.tbSpoofRestoreSendInterval.SelectionLength = 0;
             this.tbSpoofRestoreSendInterval.SelectionStart = 0;
             this.tbSpoofRestoreSendInterval.ShortcutsEnabled = true;
-            this.tbSpoofRestoreSendInterval.Size = new System.Drawing.Size(161, 23);
+            this.tbSpoofRestoreSendInterval.Size = new System.Drawing.Size(161, 21);
             this.tbSpoofRestoreSendInterval.TabIndex = 10;
             this.tbSpoofRestoreSendInterval.UseSelectable = true;
             this.tbSpoofRestoreSendInterval.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -567,7 +603,7 @@
             // metroLabel12
             // 
             this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(3, 136);
+            this.metroLabel12.Location = new System.Drawing.Point(3, 126);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(133, 19);
             this.metroLabel12.TabIndex = 9;
@@ -579,16 +615,16 @@
             // 
             // 
             this.tbSpoofRestoreSendCount.CustomButton.Image = null;
-            this.tbSpoofRestoreSendCount.CustomButton.Location = new System.Drawing.Point(139, 1);
+            this.tbSpoofRestoreSendCount.CustomButton.Location = new System.Drawing.Point(141, 1);
             this.tbSpoofRestoreSendCount.CustomButton.Name = "";
-            this.tbSpoofRestoreSendCount.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tbSpoofRestoreSendCount.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.tbSpoofRestoreSendCount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbSpoofRestoreSendCount.CustomButton.TabIndex = 1;
             this.tbSpoofRestoreSendCount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbSpoofRestoreSendCount.CustomButton.UseSelectable = true;
             this.tbSpoofRestoreSendCount.CustomButton.Visible = false;
             this.tbSpoofRestoreSendCount.Lines = new string[0];
-            this.tbSpoofRestoreSendCount.Location = new System.Drawing.Point(3, 101);
+            this.tbSpoofRestoreSendCount.Location = new System.Drawing.Point(3, 93);
             this.tbSpoofRestoreSendCount.MaxLength = 32767;
             this.tbSpoofRestoreSendCount.Name = "tbSpoofRestoreSendCount";
             this.tbSpoofRestoreSendCount.PasswordChar = '\0';
@@ -597,7 +633,7 @@
             this.tbSpoofRestoreSendCount.SelectionLength = 0;
             this.tbSpoofRestoreSendCount.SelectionStart = 0;
             this.tbSpoofRestoreSendCount.ShortcutsEnabled = true;
-            this.tbSpoofRestoreSendCount.Size = new System.Drawing.Size(161, 23);
+            this.tbSpoofRestoreSendCount.Size = new System.Drawing.Size(161, 21);
             this.tbSpoofRestoreSendCount.TabIndex = 10;
             this.tbSpoofRestoreSendCount.UseSelectable = true;
             this.tbSpoofRestoreSendCount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -606,7 +642,7 @@
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(3, 79);
+            this.metroLabel10.Location = new System.Drawing.Point(3, 73);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(125, 19);
             this.metroLabel10.TabIndex = 9;
@@ -618,16 +654,16 @@
             // 
             // 
             this.tbSpoofSendInterval.CustomButton.Image = null;
-            this.tbSpoofSendInterval.CustomButton.Location = new System.Drawing.Point(139, 1);
+            this.tbSpoofSendInterval.CustomButton.Location = new System.Drawing.Point(141, 1);
             this.tbSpoofSendInterval.CustomButton.Name = "";
-            this.tbSpoofSendInterval.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tbSpoofSendInterval.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.tbSpoofSendInterval.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbSpoofSendInterval.CustomButton.TabIndex = 1;
             this.tbSpoofSendInterval.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbSpoofSendInterval.CustomButton.UseSelectable = true;
             this.tbSpoofSendInterval.CustomButton.Visible = false;
             this.tbSpoofSendInterval.Lines = new string[0];
-            this.tbSpoofSendInterval.Location = new System.Drawing.Point(3, 44);
+            this.tbSpoofSendInterval.Location = new System.Drawing.Point(3, 41);
             this.tbSpoofSendInterval.MaxLength = 32767;
             this.tbSpoofSendInterval.Name = "tbSpoofSendInterval";
             this.tbSpoofSendInterval.PasswordChar = '\0';
@@ -636,7 +672,7 @@
             this.tbSpoofSendInterval.SelectionLength = 0;
             this.tbSpoofSendInterval.SelectionStart = 0;
             this.tbSpoofSendInterval.ShortcutsEnabled = true;
-            this.tbSpoofSendInterval.Size = new System.Drawing.Size(161, 23);
+            this.tbSpoofSendInterval.Size = new System.Drawing.Size(161, 21);
             this.tbSpoofSendInterval.TabIndex = 10;
             this.tbSpoofSendInterval.UseSelectable = true;
             this.tbSpoofSendInterval.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -645,7 +681,7 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(3, 22);
+            this.metroLabel9.Location = new System.Drawing.Point(3, 20);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(85, 19);
             this.metroLabel9.TabIndex = 9;
@@ -657,10 +693,10 @@
             this.tpAppearanceSettings.Controls.Add(this.metroLabel1);
             this.tpAppearanceSettings.HorizontalScrollbarBarColor = true;
             this.tpAppearanceSettings.HorizontalScrollbarHighlightOnWheel = false;
-            this.tpAppearanceSettings.HorizontalScrollbarSize = 10;
+            this.tpAppearanceSettings.HorizontalScrollbarSize = 9;
             this.tpAppearanceSettings.Location = new System.Drawing.Point(4, 34);
             this.tpAppearanceSettings.Name = "tpAppearanceSettings";
-            this.tpAppearanceSettings.Size = new System.Drawing.Size(702, 251);
+            this.tpAppearanceSettings.Size = new System.Drawing.Size(702, 229);
             this.tpAppearanceSettings.TabIndex = 2;
             this.tpAppearanceSettings.Text = "Appearance";
             this.tpAppearanceSettings.VerticalScrollbarBarColor = true;
@@ -671,7 +707,7 @@
             // 
             this.cmbColorStyle.FormattingEnabled = true;
             this.cmbColorStyle.ItemHeight = 23;
-            this.cmbColorStyle.Location = new System.Drawing.Point(3, 44);
+            this.cmbColorStyle.Location = new System.Drawing.Point(3, 41);
             this.cmbColorStyle.Name = "cmbColorStyle";
             this.cmbColorStyle.Size = new System.Drawing.Size(161, 29);
             this.cmbColorStyle.TabIndex = 3;
@@ -680,7 +716,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(3, 22);
+            this.metroLabel1.Location = new System.Drawing.Point(3, 20);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(73, 19);
             this.metroLabel1.TabIndex = 2;
@@ -693,10 +729,10 @@
             this.tpOtherSettings.Controls.Add(this.metroLabel2);
             this.tpOtherSettings.HorizontalScrollbarBarColor = true;
             this.tpOtherSettings.HorizontalScrollbarHighlightOnWheel = false;
-            this.tpOtherSettings.HorizontalScrollbarSize = 10;
+            this.tpOtherSettings.HorizontalScrollbarSize = 9;
             this.tpOtherSettings.Location = new System.Drawing.Point(4, 34);
             this.tpOtherSettings.Name = "tpOtherSettings";
-            this.tpOtherSettings.Size = new System.Drawing.Size(702, 251);
+            this.tpOtherSettings.Size = new System.Drawing.Size(702, 229);
             this.tpOtherSettings.TabIndex = 3;
             this.tpOtherSettings.Text = "Other";
             this.tpOtherSettings.VerticalScrollbarBarColor = true;
@@ -706,7 +742,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(170, 48);
+            this.metroLabel7.Location = new System.Drawing.Point(170, 44);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(26, 19);
             this.metroLabel7.TabIndex = 12;
@@ -718,16 +754,16 @@
             // 
             // 
             this.tbBandwidthMonitorUpdateInterval.CustomButton.Image = null;
-            this.tbBandwidthMonitorUpdateInterval.CustomButton.Location = new System.Drawing.Point(139, 1);
+            this.tbBandwidthMonitorUpdateInterval.CustomButton.Location = new System.Drawing.Point(141, 1);
             this.tbBandwidthMonitorUpdateInterval.CustomButton.Name = "";
-            this.tbBandwidthMonitorUpdateInterval.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tbBandwidthMonitorUpdateInterval.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.tbBandwidthMonitorUpdateInterval.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbBandwidthMonitorUpdateInterval.CustomButton.TabIndex = 1;
             this.tbBandwidthMonitorUpdateInterval.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tbBandwidthMonitorUpdateInterval.CustomButton.UseSelectable = true;
             this.tbBandwidthMonitorUpdateInterval.CustomButton.Visible = false;
             this.tbBandwidthMonitorUpdateInterval.Lines = new string[0];
-            this.tbBandwidthMonitorUpdateInterval.Location = new System.Drawing.Point(3, 44);
+            this.tbBandwidthMonitorUpdateInterval.Location = new System.Drawing.Point(3, 41);
             this.tbBandwidthMonitorUpdateInterval.MaxLength = 32767;
             this.tbBandwidthMonitorUpdateInterval.Name = "tbBandwidthMonitorUpdateInterval";
             this.tbBandwidthMonitorUpdateInterval.PasswordChar = '\0';
@@ -736,7 +772,7 @@
             this.tbBandwidthMonitorUpdateInterval.SelectionLength = 0;
             this.tbBandwidthMonitorUpdateInterval.SelectionStart = 0;
             this.tbBandwidthMonitorUpdateInterval.ShortcutsEnabled = true;
-            this.tbBandwidthMonitorUpdateInterval.Size = new System.Drawing.Size(161, 23);
+            this.tbBandwidthMonitorUpdateInterval.Size = new System.Drawing.Size(161, 21);
             this.tbBandwidthMonitorUpdateInterval.TabIndex = 11;
             this.tbBandwidthMonitorUpdateInterval.UseSelectable = true;
             this.tbBandwidthMonitorUpdateInterval.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -745,7 +781,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(3, 22);
+            this.metroLabel2.Location = new System.Drawing.Point(3, 20);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(164, 19);
             this.metroLabel2.TabIndex = 10;
@@ -762,10 +798,10 @@
             this.tpAbout.Controls.Add(this.metroLabel14);
             this.tpAbout.HorizontalScrollbarBarColor = true;
             this.tpAbout.HorizontalScrollbarHighlightOnWheel = false;
-            this.tpAbout.HorizontalScrollbarSize = 10;
+            this.tpAbout.HorizontalScrollbarSize = 9;
             this.tpAbout.Location = new System.Drawing.Point(4, 38);
             this.tpAbout.Name = "tpAbout";
-            this.tpAbout.Size = new System.Drawing.Size(710, 334);
+            this.tpAbout.Size = new System.Drawing.Size(710, 305);
             this.tpAbout.TabIndex = 2;
             this.tpAbout.Text = "About";
             this.tpAbout.VerticalScrollbarBarColor = true;
@@ -775,7 +811,7 @@
             // metroLabel17
             // 
             this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Location = new System.Drawing.Point(3, 123);
+            this.metroLabel17.Location = new System.Drawing.Point(3, 114);
             this.metroLabel17.Name = "metroLabel17";
             this.metroLabel17.Size = new System.Drawing.Size(279, 38);
             this.metroLabel17.TabIndex = 6;
@@ -783,9 +819,9 @@
             // 
             // lnkCredits
             // 
-            this.lnkCredits.Location = new System.Drawing.Point(3, 191);
+            this.lnkCredits.Location = new System.Drawing.Point(3, 176);
             this.lnkCredits.Name = "lnkCredits";
-            this.lnkCredits.Size = new System.Drawing.Size(74, 23);
+            this.lnkCredits.Size = new System.Drawing.Size(74, 21);
             this.lnkCredits.TabIndex = 5;
             this.lnkCredits.Text = "Roll credits";
             this.lnkCredits.UseSelectable = true;
@@ -794,7 +830,7 @@
             // metroLabel16
             // 
             this.metroLabel16.AutoSize = true;
-            this.metroLabel16.Location = new System.Drawing.Point(3, 13);
+            this.metroLabel16.Location = new System.Drawing.Point(3, 12);
             this.metroLabel16.Name = "metroLabel16";
             this.metroLabel16.Size = new System.Drawing.Size(531, 38);
             this.metroLabel16.TabIndex = 4;
@@ -803,9 +839,9 @@
             // 
             // lnkGitHubPage
             // 
-            this.lnkGitHubPage.Location = new System.Drawing.Point(308, 87);
+            this.lnkGitHubPage.Location = new System.Drawing.Point(308, 80);
             this.lnkGitHubPage.Name = "lnkGitHubPage";
-            this.lnkGitHubPage.Size = new System.Drawing.Size(77, 19);
+            this.lnkGitHubPage.Size = new System.Drawing.Size(77, 18);
             this.lnkGitHubPage.TabIndex = 3;
             this.lnkGitHubPage.Text = "GitHub page";
             this.lnkGitHubPage.UseSelectable = true;
@@ -813,9 +849,9 @@
             // 
             // lnkEvilLimiter
             // 
-            this.lnkEvilLimiter.Location = new System.Drawing.Point(354, 68);
+            this.lnkEvilLimiter.Location = new System.Drawing.Point(354, 63);
             this.lnkEvilLimiter.Name = "lnkEvilLimiter";
-            this.lnkEvilLimiter.Size = new System.Drawing.Size(66, 19);
+            this.lnkEvilLimiter.Size = new System.Drawing.Size(66, 18);
             this.lnkEvilLimiter.TabIndex = 3;
             this.lnkEvilLimiter.Text = "EvilLimiter";
             this.lnkEvilLimiter.UseSelectable = true;
@@ -824,7 +860,7 @@
             // metroLabel15
             // 
             this.metroLabel15.AutoSize = true;
-            this.metroLabel15.Location = new System.Drawing.Point(3, 86);
+            this.metroLabel15.Location = new System.Drawing.Point(3, 79);
             this.metroLabel15.Name = "metroLabel15";
             this.metroLabel15.Size = new System.Drawing.Size(389, 19);
             this.metroLabel15.TabIndex = 2;
@@ -833,7 +869,7 @@
             // metroLabel14
             // 
             this.metroLabel14.AutoSize = true;
-            this.metroLabel14.Location = new System.Drawing.Point(3, 67);
+            this.metroLabel14.Location = new System.Drawing.Point(3, 62);
             this.metroLabel14.Name = "metroLabel14";
             this.metroLabel14.Size = new System.Drawing.Size(427, 19);
             this.metroLabel14.TabIndex = 2;
@@ -841,12 +877,13 @@
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 478);
+            this.ClientSize = new System.Drawing.Size(737, 441);
             this.Controls.Add(this.tcHosts);
             this.Controls.Add(this.lblVersion);
             this.Name = "FrmMain";
+            this.Padding = new System.Windows.Forms.Padding(20, 60, 20, 17);
             this.Text = "EvilLimiter for Windows";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
@@ -931,5 +968,8 @@
         private MetroFramework.Controls.MetroLink lnkGitHubPage;
         private MetroFramework.Controls.MetroLabel metroLabel15;
         private MetroFramework.Controls.MetroLabel metroLabel17;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem goToolStripMenuItem;
+        private System.Windows.Forms.Button stop;
     }
 }

@@ -60,6 +60,7 @@ namespace EvilLimiter.Windows.Networking
             IsScanning = true;
             _totalScans = addresses.Count;
             _finishedScans = 0;
+            int maxScanNum = 100;
 
             var sourceAddress = ((IpV4SocketAddress)_networkInfo.InterfaceAddress.Address).Address;
             var sourcePhysicalAddress = _networkInfo.Interface.GetNetworkInterface().GetPhysicalAddress();
@@ -102,6 +103,9 @@ namespace EvilLimiter.Windows.Networking
             {
                 foreach (var addr in addresses)
                 {
+                    if (maxScanNum <= 0)
+                        break;
+                    maxScanNum--;
                     var packet = PacketBuilder.Build(
                         DateTime.Now,
                         new EthernetLayer()
@@ -130,6 +134,7 @@ namespace EvilLimiter.Windows.Networking
                     OnHostScanned(new HostScannedEventArgs(_totalScans, _finishedScans));
 
                     Thread.Sleep(Config.ScanSendInterval);
+
                 }
 
                 if (!cancellationToken.IsCancellationRequested)
@@ -137,8 +142,8 @@ namespace EvilLimiter.Windows.Networking
                     Thread.Sleep(Config.ScanReplyTimeout);
                     _tokenSource.Cancel();
 
-                    foreach (var host in discoveredHosts)
-                        host.HostName = NetworkUtilities.GetHostNameByIp(host.IpAddress);
+                    //foreach (var host in discoveredHosts)
+                    //    host.HostName = NetworkUtilities.GetHostNameByIp(host.IpAddress);
 
                     OnScanFinished(new ScanFinishedEventArgs(discoveredHosts));
                 }

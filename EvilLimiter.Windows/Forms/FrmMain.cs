@@ -32,8 +32,9 @@ namespace EvilLimiter.Windows.Forms
         private readonly HostSpoofer _hostSpoofer;
         private readonly HostLimiter _hostLimiter;
 
-
-
+        private bool _isRunning = false;
+        private CancellationTokenSource _cts;
+        private List<Host> _selectedHosts;
         public FrmMain(NetworkInformation netInfo)
         {
             InitializeComponent();
@@ -411,5 +412,69 @@ The application will be terminated to avoid unwanted behaviour.",
 
         #endregion
 
+        private async void goToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_isRunning) return;
+            _isRunning = true;
+            _selectedHosts = GetSelectedHosts();
+            _cts = new CancellationTokenSource();
+            Console.WriteLine("Starting...");
+            await PrintHostsPeriodically (_cts.Token, _selectedHosts);
+           
+        }
+        private void block(Host host)
+        {
+            _hostSpoofer.Add(host);
+            _hostLimiter.Add(host, LimitRule.Block);
+            UpdateHostListView(host);
+        }
+        private void free(Host host)
+        {
+            FreeHost(host);
+            UpdateHostListView(host);
+        }
+        private async Task PrintHostsPeriodically(CancellationToken token, List<Host> hosts)
+        {
+            try
+            {
+                while (_isRunning)
+                {
+                    if (token.IsCancellationRequested) break;
+
+                    foreach (var host in hosts)
+                    {
+                        Console.WriteLine($"Block Host : {host.IpAddress} ");
+                        block(host);
+                    }
+                    await Task.Delay(1286);
+                    foreach (var host in hosts)
+                    {
+                        Console.WriteLine($"Free Host : {host.IpAddress} ");
+                        free(host);
+                    }
+                    await Task.Delay(10000);
+
+                }
+            }
+            catch (OperationCanceledException)
+            {
+                Console.WriteLine("Task cancelled");
+            }
+            finally
+            {
+                _isRunning = false;
+            }
+        }
+
+        private void stop_Click(object sender, EventArgs e)
+        {
+            if (_isRunning && _cts != null)
+            {
+                _cts.Cancel();
+                _isRunning = false;
+                Console.WriteLine("Task stopped");
+                
+            }
+        }
     }
 }
