@@ -35,6 +35,8 @@ namespace EvilLimiter.Windows.Forms
         private bool _isRunning = false;
         private CancellationTokenSource _cts;
         private List<Host> _selectedHosts;
+        private int _tBlock = 1024;
+        private int _tFree = 10000;
         public FrmMain(NetworkInformation netInfo)
         {
             InitializeComponent();
@@ -415,6 +417,8 @@ The application will be terminated to avoid unwanted behaviour.",
         private async void goToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (_isRunning) return;
+            _tBlock = (int)tBlock.Value;
+            _tFree = (int)tFree.Value;
             _isRunning = true;
             _selectedHosts = GetSelectedHosts();
             _cts = new CancellationTokenSource();
@@ -446,13 +450,13 @@ The application will be terminated to avoid unwanted behaviour.",
                         Console.WriteLine($"Block Host : {host.IpAddress} ");
                         block(host);
                     }
-                    await Task.Delay(1286);
+                    await Task.Delay(_tBlock);
                     foreach (var host in hosts)
                     {
                         Console.WriteLine($"Free Host : {host.IpAddress} ");
                         free(host);
                     }
-                    await Task.Delay(10000);
+                    await Task.Delay(_tFree);
 
                 }
             }

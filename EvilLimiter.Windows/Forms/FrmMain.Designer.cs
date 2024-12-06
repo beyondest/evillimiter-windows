@@ -90,6 +90,10 @@
             this.lnkEvilLimiter = new MetroFramework.Controls.MetroLink();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.tBlock = new System.Windows.Forms.NumericUpDown();
+            this.tFree = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.cmsHosts.SuspendLayout();
             this.tcHosts.SuspendLayout();
             this.tpHosts.SuspendLayout();
@@ -101,6 +105,8 @@
             this.tpAppearanceSettings.SuspendLayout();
             this.tpOtherSettings.SuspendLayout();
             this.tpAbout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tBlock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tFree)).BeginInit();
             this.SuspendLayout();
             // 
             // cmsHosts
@@ -269,6 +275,10 @@
             // 
             // tpHosts
             // 
+            this.tpHosts.Controls.Add(this.label2);
+            this.tpHosts.Controls.Add(this.label1);
+            this.tpHosts.Controls.Add(this.tFree);
+            this.tpHosts.Controls.Add(this.tBlock);
             this.tpHosts.Controls.Add(this.stop);
             this.tpHosts.Controls.Add(this.button1);
             this.tpHosts.Controls.Add(this.lvwHosts);
@@ -317,7 +327,7 @@
             this.tpSettings.HorizontalScrollbarSize = 9;
             this.tpSettings.Location = new System.Drawing.Point(4, 38);
             this.tpSettings.Name = "tpSettings";
-            this.tpSettings.Size = new System.Drawing.Size(710, 305);
+            this.tpSettings.Size = new System.Drawing.Size(683, 305);
             this.tpSettings.TabIndex = 1;
             this.tpSettings.Text = "Settings";
             this.tpSettings.VerticalScrollbarBarColor = true;
@@ -801,7 +811,7 @@
             this.tpAbout.HorizontalScrollbarSize = 9;
             this.tpAbout.Location = new System.Drawing.Point(4, 38);
             this.tpAbout.Name = "tpAbout";
-            this.tpAbout.Size = new System.Drawing.Size(710, 305);
+            this.tpAbout.Size = new System.Drawing.Size(683, 305);
             this.tpAbout.TabIndex = 2;
             this.tpAbout.Text = "About";
             this.tpAbout.VerticalScrollbarBarColor = true;
@@ -875,6 +885,68 @@
             this.metroLabel14.TabIndex = 2;
             this.metroLabel14.Text = "This is the Windows version of the linux command-line tool                  .";
             // 
+            // tBlock
+            // 
+            this.tBlock.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.tBlock.Location = new System.Drawing.Point(71, 280);
+            this.tBlock.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.tBlock.Name = "tBlock";
+            this.tBlock.Size = new System.Drawing.Size(87, 21);
+            this.tBlock.TabIndex = 6;
+            this.tBlock.Value = new decimal(new int[] {
+            1024,
+            0,
+            0,
+            0});
+            // 
+            // tFree
+            // 
+            this.tFree.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.tFree.Location = new System.Drawing.Point(245, 282);
+            this.tFree.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.tFree.Name = "tFree";
+            this.tFree.Size = new System.Drawing.Size(87, 21);
+            this.tFree.TabIndex = 7;
+            this.tFree.Value = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(69, 265);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 12);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "blocktime/ms";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(243, 267);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 12);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "freetime/ms";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -890,6 +962,7 @@
             this.cmsHosts.ResumeLayout(false);
             this.tcHosts.ResumeLayout(false);
             this.tpHosts.ResumeLayout(false);
+            this.tpHosts.PerformLayout();
             this.tpSettings.ResumeLayout(false);
             this.tcSettings.ResumeLayout(false);
             this.tpRoutingSettings.ResumeLayout(false);
@@ -904,6 +977,8 @@
             this.tpOtherSettings.PerformLayout();
             this.tpAbout.ResumeLayout(false);
             this.tpAbout.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tBlock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tFree)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -971,5 +1046,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem goToolStripMenuItem;
         private System.Windows.Forms.Button stop;
+        private System.Windows.Forms.NumericUpDown tFree;
+        private System.Windows.Forms.NumericUpDown tBlock;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
