@@ -456,6 +456,8 @@ The application will be terminated to avoid unwanted behaviour.",
                         Console.WriteLine($"Free Host : {host.IpAddress} ");
                         free(host);
                     }
+
+
                     await Task.Delay(_tFree);
 
                 }
