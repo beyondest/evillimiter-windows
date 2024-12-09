@@ -39,6 +39,9 @@
             this.pbScan = new MetroFramework.Controls.MetroProgressBar();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lblStatus = new MetroFramework.Controls.MetroLabel();
+            this.maxScanNum = new System.Windows.Forms.NumericUpDown();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.maxScanNum)).BeginInit();
             this.SuspendLayout();
             // 
             // rbtnEntireRange
@@ -91,7 +94,7 @@
             this.tbIpRange.CustomButton.Image = null;
             this.tbIpRange.CustomButton.Location = new System.Drawing.Point(151, 1);
             this.tbIpRange.CustomButton.Name = "";
-            this.tbIpRange.CustomButton.Size = new System.Drawing.Size(19, 18);
+            this.tbIpRange.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.tbIpRange.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbIpRange.CustomButton.TabIndex = 1;
             this.tbIpRange.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -176,12 +179,49 @@
             this.lblStatus.Size = new System.Drawing.Size(0, 0);
             this.lblStatus.TabIndex = 6;
             // 
+            // maxScanNum
+            // 
+            this.maxScanNum.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.maxScanNum.Location = new System.Drawing.Point(23, 201);
+            this.maxScanNum.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.maxScanNum.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.maxScanNum.Name = "maxScanNum";
+            this.maxScanNum.Size = new System.Drawing.Size(78, 21);
+            this.maxScanNum.TabIndex = 7;
+            this.maxScanNum.Value = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(23, 174);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(61, 21);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.Text = "MaxScan";
+            // 
             // FrmScan
             // 
             this.AcceptButton = this.btnScan;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(294, 284);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.maxScanNum);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.pbScan);
@@ -196,11 +236,12 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmScan";
-            this.Padding = new System.Windows.Forms.Padding(20, 51, 20, 17);
+            this.Padding = new System.Windows.Forms.Padding(20, 60, 20, 17);
             this.Resizable = false;
             this.ShowInTaskbar = false;
             this.Text = "Host Scan";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmScan_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.maxScanNum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +260,7 @@
         private MetroFramework.Controls.MetroProgressBar pbScan;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel lblStatus;
+        private System.Windows.Forms.NumericUpDown maxScanNum;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

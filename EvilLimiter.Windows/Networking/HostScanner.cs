@@ -52,7 +52,7 @@ namespace EvilLimiter.Windows.Networking
 
 
 
-        public void Scan(ICollection<IpV4Address> addresses)
+        public void Scan(ICollection<IpV4Address> addresses,int maxScanNum)
         {
             if (IsScanning)
                 return;
@@ -60,8 +60,7 @@ namespace EvilLimiter.Windows.Networking
             IsScanning = true;
             _totalScans = addresses.Count;
             _finishedScans = 0;
-            int maxScanNum = 100;
-
+            
             var sourceAddress = ((IpV4SocketAddress)_networkInfo.InterfaceAddress.Address).Address;
             var sourcePhysicalAddress = _networkInfo.Interface.GetNetworkInterface().GetPhysicalAddress();
 
@@ -75,7 +74,7 @@ namespace EvilLimiter.Windows.Networking
                 {
                     if (cancellationToken.IsCancellationRequested)
                         break;
-
+                   
                     _networkInfo.Communicator.ReceivePacket(out Packet p);
 
                     if (!cancellationToken.IsCancellationRequested &&

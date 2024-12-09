@@ -20,7 +20,7 @@ namespace EvilLimiter.Windows.Forms
 
         private readonly NetworkInformation _networkInfo;
         private readonly HostScanner _hostScanner;
-
+        private int _maxScanNum = 200;
         #region Events
 
         public event EventHandler<ScanFinishedEventArgs> ScanFinished;
@@ -115,6 +115,7 @@ namespace EvilLimiter.Windows.Forms
 
         private void BtnScan_Click(object sender, System.EventArgs e)
         {
+            _maxScanNum = (int)maxScanNum.Value;
             if (_hostScanner.IsScanning)
             {
                 _hostScanner.Cancel();
@@ -140,7 +141,7 @@ namespace EvilLimiter.Windows.Forms
                     range = _networkInfo.SubnetRange;
 
                 ChangeScanState(ScanState.Scan);
-                _hostScanner.Scan(range);
+                _hostScanner.Scan(range,_maxScanNum);
             }
         }
 
